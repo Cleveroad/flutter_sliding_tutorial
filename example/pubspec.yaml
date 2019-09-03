@@ -1,0 +1,27 @@
+name: example_flutter_sliding_tutorial
+description: example flutter_sliding_tutorial.
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_svg: ^0.14.0
+  flutter_sliding_tutorial:
+    path: ../
+
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
