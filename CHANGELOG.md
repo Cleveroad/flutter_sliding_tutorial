@@ -7,3 +7,4 @@
 Version | Changes
 ---     | ---
 v.0.0.1 | <ul><li>First public release</li></ul>
+v.0.1.0 | <ul><li>Removed unnecessary dependency</li></ul>

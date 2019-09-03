@@ -1,11 +1,11 @@
 ## SlidingTutorial [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Solido/awesome-flutter) <a href="https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts"><img src="https://www.cleveroad.com/public/comercial/label-cleveroad.svg" height="20"></a>
-![Header image](/images/header.jpg)
+![Header image](https://github.com/Cleveroad/flutter_sliding_tutorial/raw/master/images/header.jpg)
 
 ## Cleveroad introduces Sliding Tutorial Library for Flutter
 
 Hey guys, hope you haven’t started developing a tutorial for your Flutter app yet, as we have already completed a part of your job. Don’t worry, we act from good motives only. Our aim is to help you create a sliding tutorial in a fast and simple manner. So we’ve done some work and voila!. A simple Flutter Sliding Tutorial library is at your service.
 
-![Demo image](/images/demo.gif)
+![Demo image](https://github.com/Cleveroad/flutter_sliding_tutorial/raw/master/images/demo.gif)
 ###### Also you can watch the animation of the <strong><a target="_blank" href="https://www.youtube.com/watch?v=lJSGIk4Zh9s&feature=youtu.be">Sliding Tutorial for Android on YouTube</a></strong> in HD quality.
 
 The invention is going to ease the problem of structural design but not to limit a stretch of your imagination at the same time. We took care of the suitability aspect. So, your app is not going to look alien among other Flutter elements. 
@@ -17,7 +17,7 @@ All you need to do is:
 <br>2. Create icons for each screen of your tutorial
 <br>3. Follow the instructions below
 
-[![Awesome](/images/logo-footer.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
+[![Awesome](https://github.com/Cleveroad/flutter_sliding_tutorial/raw/master/images/logo-footer.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
 
 
 ## Full Documentation
@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  flutter_sliding_tutorial: "^0.0.1"
+  flutter_sliding_tutorial: "^0.1.0"
 ```
 
 In your library add the following import:

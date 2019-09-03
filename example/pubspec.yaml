@@ -9,14 +9,13 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^0.1.2
+  flutter_svg: ^0.14.0
+  flutter_sliding_tutorial:
+    path: ../
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_svg: ^0.14.0
-  flutter_sliding_tutorial:
-    path: ../
 
 flutter:
 

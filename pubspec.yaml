@@ -1,6 +1,6 @@
 name: flutter_sliding_tutorial
 description: Applied parallax effects will make your product presentation look like Google apps tutorial.
-version: 0.0.1
+version: 0.1.0
 author: "cleveroad.com <info@cleveroad.com>"
 homepage: https://github.com/Cleveroad/flutter_sliding_tutorial
 
@@ -10,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
