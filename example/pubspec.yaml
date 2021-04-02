@@ -2,14 +2,15 @@ name: example_flutter_sliding_tutorial
 description: example flutter_sliding_tutorial.
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=2.0.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^0.1.2
-  flutter_svg: ^0.14.0
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^0.21.0-nullsafety.0
   flutter_sliding_tutorial:
     path: ../
 

@@ -8,9 +8,11 @@ class SlidingTutorial extends StatefulWidget {
   final ValueNotifier<double> notifier;
   final int pageCount;
 
-  const SlidingTutorial(
-      {Key key, @required this.notifier, @required this.pageCount})
-      : super(key: key);
+  const SlidingTutorial({
+    required this.notifier,
+    required this.pageCount,
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _SlidingTutorial();
@@ -21,6 +23,7 @@ class _SlidingTutorial extends State<SlidingTutorial> {
 
   @override
   void initState() {
+    /// Listen to [PageView] position updates.
     _pageController..addListener(_onScroll);
     super.initState();
   }
@@ -37,6 +40,7 @@ class _SlidingTutorial extends State<SlidingTutorial> {
                     widget.pageCount, (index) => _getPageByIndex(index)))));
   }
 
+  /// Create different [SlidingPage] for indexes.
   Widget _getPageByIndex(int index) {
     switch (index % 3) {
       case 0:
@@ -50,7 +54,8 @@ class _SlidingTutorial extends State<SlidingTutorial> {
     }
   }
 
+  /// Notify [SlidingPage] about current page changes.
   _onScroll() {
-    widget.notifier?.value = _pageController.page;
+    widget.notifier.value = _pageController.page ?? 0;
   }
 }

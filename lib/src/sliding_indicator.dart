@@ -1,7 +1,22 @@
 import 'dart:math' as math;
 
 import 'package:flutter/widgets.dart';
+import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
 
+/// [SlidingIndicator] - widget for indication of current page position in
+/// tutorial with rotation transition of [activeIndicator] between [inActiveIndicator].
+///
+/// [notifier] [ValueNotifier] with double value for animated transition of [activeIndicator].
+///
+/// [activeIndicator] widget that indicates current [SlidingPage] in [PageView].
+///
+/// [inActiveIndicator] widget that shows all [SlidingPage] in [PageView].
+///
+/// [indicatorCount] total count of [inActiveIndicator] widgets in [SlidingIndicator].
+///
+/// [sizeIndicator] size of [activeIndicator] and [inActiveIndicator] widgets.
+///
+/// [margin] space between [inActiveIndicator] widgets.
 class SlidingIndicator extends StatelessWidget {
   final ValueNotifier<double> notifier;
   final Widget activeIndicator;
@@ -11,13 +26,13 @@ class SlidingIndicator extends StatelessWidget {
   final double margin;
 
   const SlidingIndicator({
-    Key key,
-    @required this.notifier,
-    @required this.activeIndicator,
-    @required this.inActiveIndicator,
-    @required this.indicatorCount,
+    required this.notifier,
+    required this.activeIndicator,
+    required this.inActiveIndicator,
+    required this.indicatorCount,
     this.sizeIndicator = 10,
     this.margin = 8,
+    Key? key,
   }) : super(key: key);
 
   @override
