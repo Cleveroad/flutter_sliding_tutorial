@@ -1,24 +1,35 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_sliding_tutorial/src/sliding_page.dart';
 
+/// [SlidingContainer] widget that moves [child] based on [offset] and [SlidingPage]
+/// scroll position and page.
+///
+/// [child] widget to be move separately from [PageView] on swipe for parallax effect.
+///
+/// [offset] value for tweaking parallax movement of [child].
+/// Different values can be used to find best solution.
 class SlidingContainer extends StatefulWidget {
   final Widget child;
   final double offset;
 
-  SlidingContainer({this.child, this.offset = 100, Key key}) : super(key: key);
+  SlidingContainer({
+    required this.child,
+    this.offset = 100,
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _SlidingContainer();
 }
 
 class _SlidingContainer extends State<SlidingContainer> {
-  int _page;
-  ValueNotifier<double> _notifier;
+  int? _page;
+  late ValueNotifier<double> _notifier;
 
   @override
   void didChangeDependencies() {
-    _page = SlidingPage.of(context).page;
-    _notifier = SlidingPage.of(context).notifier;
+    _page = SlidingPage.of(context)?.page;
+    _notifier = SlidingPage.of(context)!.notifier;
     super.didChangeDependencies();
   }
 

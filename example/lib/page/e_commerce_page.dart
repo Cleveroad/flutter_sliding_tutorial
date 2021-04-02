@@ -14,7 +14,7 @@ class ECommercePage extends StatelessWidget {
       page: page,
       child: Container(
         child: Stack(
-          overflow: Overflow.visible,
+          clipBehavior: Clip.none,
           children: [
             Center(
               child: FractionallySizedBox(

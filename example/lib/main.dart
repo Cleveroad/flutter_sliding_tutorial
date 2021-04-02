@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
 }
 
 class ExamplePage extends StatefulWidget {
-  ExamplePage({Key key}) : super(key: key);
+  ExamplePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _ExamplePageState createState() => _ExamplePageState();
@@ -31,10 +33,13 @@ class _ExamplePageState extends State<ExamplePage> {
       body: Center(
           child: Stack(
         children: <Widget>[
+          /// [StatefulWidget] with [PageView] and [AnimatedBackgroundColor].
           SlidingTutorial(
             pageCount: pageCount,
             notifier: notifier,
           ),
+
+          /// Separator.
           Align(
             alignment: Alignment(0, 0.85),
             child: Container(
@@ -43,6 +48,8 @@ class _ExamplePageState extends State<ExamplePage> {
               color: Colors.white,
             ),
           ),
+
+          /// [SlidingIndicator] for [PageView] in [SlidingTutorial].
           Align(
             alignment: Alignment(0, 0.94),
             child: SlidingIndicator(

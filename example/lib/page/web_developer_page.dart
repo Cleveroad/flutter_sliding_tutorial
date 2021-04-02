@@ -14,7 +14,7 @@ class WebDevelopersPage extends StatelessWidget {
       notifier: notifier,
       child: Container(
         child: Stack(
-          overflow: Overflow.visible,
+          clipBehavior: Clip.none,
           children: [
             Center(
               child: FractionallySizedBox(
