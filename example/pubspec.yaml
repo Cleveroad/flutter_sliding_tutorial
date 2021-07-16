@@ -10,7 +10,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  flutter_svg: ^0.21.0-nullsafety.0
+  flutter_svg: ^0.22.0
   flutter_sliding_tutorial:
     path: ../
 

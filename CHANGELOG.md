@@ -6,5 +6,7 @@
 
 Version | Changes
 ---     | ---
-v.0.0.1 | <ul><li>First public release</li></ul>
+v.1.1.0 | <ul><li>Fixed sliding indicator oversize when using icons</li></ul>
+v.1.0.0-nullsafety | <ul><li>Null safety support</li></ul>
 v.0.1.0 | <ul><li>Removed unnecessary dependency</li></ul>
+v.0.0.1 | <ul><li>First public release</li></ul>
