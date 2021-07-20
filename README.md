@@ -17,7 +17,7 @@ All you need to do is:
 <br>2. Create icons for each screen of your tutorial
 <br>3. Follow the instructions below
 
-[![Awesome](https://github.com/Cleveroad/flutter_sliding_tutorial/raw/master/images/logo-footer.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
+[![Awesome](https://avatars.githubusercontent.com/u/14131420?s=200&v=4)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
 
 
 ## Full Documentation
@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  flutter_sliding_tutorial: "^0.1.0"
+  flutter_sliding_tutorial: "^1.1.0"
 ```
 
 In your library add the following import:
@@ -55,7 +55,7 @@ If you have any questions regarding the use of this tutorial, please contact us 
 
         The MIT License (MIT)
 
-        Copyright (c) 2015-2016 Cleveroad
+        Copyright (c) 2021 Cleveroad
 
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
