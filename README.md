@@ -1,5 +1,6 @@
-## SlidingTutorial [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Solido/awesome-flutter) 
+## SlidingTutorial [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Solido/awesome-flutter) <a href="https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts"><img src="https://www.cleveroad.com/public/comercial/label-cleveroad.svg" height="20"></a>
 ![Header image](https://github.com/Cleveroad/flutter_sliding_tutorial/raw/master/images/header.jpg)
+
 ## Cleveroad introduces Sliding Tutorial Library for Flutter
 
 Hey guys, hope you haven’t started developing a tutorial for your Flutter app yet, as we have already completed a part of your job. Don’t worry, we act from good motives only. Our aim is to help you create a sliding tutorial in a fast and simple manner. So we’ve done some work and voila!. A simple Flutter Sliding Tutorial library is at your service.
@@ -16,7 +17,7 @@ All you need to do is:
 <br>2. Create icons for each screen of your tutorial
 <br>3. Follow the instructions below
 
-[![Awesome](https://github.com/Cleveroad/flutter_sliding_tutorial/raw/master/images/logo-footer.png)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
+[![Awesome](https://avatars.githubusercontent.com/u/14131420?s=200&v=4)](https://www.cleveroad.com/?utm_source=github&utm_medium=label&utm_campaign=contacts)
 
 
 ## Full Documentation
@@ -26,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  flutter_sliding_tutorial: "^0.1.0"
+  flutter_sliding_tutorial: "^1.1.0"
 ```
 
 In your library add the following import:
@@ -54,7 +55,7 @@ If you have any questions regarding the use of this tutorial, please contact us 
 
         The MIT License (MIT)
 
-        Copyright (c) 2015-2016 Cleveroad
+        Copyright (c) 2021 Cleveroad
 
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
