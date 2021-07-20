@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
 
@@ -21,8 +22,9 @@ class SlidingIndicator extends StatelessWidget {
   final ValueNotifier<double> notifier;
   final Widget activeIndicator;
   final Widget inActiveIndicator;
+  final double activeIndicatorSize;
+  final double inactiveIndicatorSize;
   final int indicatorCount;
-  final double sizeIndicator;
   final double margin;
 
   const SlidingIndicator({
@@ -30,7 +32,8 @@ class SlidingIndicator extends StatelessWidget {
     required this.activeIndicator,
     required this.inActiveIndicator,
     required this.indicatorCount,
-    this.sizeIndicator = 10,
+    this.activeIndicatorSize = 10,
+    this.inactiveIndicatorSize = 10,
     this.margin = 8,
     Key? key,
   }) : super(key: key);
@@ -39,36 +42,54 @@ class SlidingIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
+      children: [
         Stack(
-          children: <Widget>[
+          alignment: Alignment.centerLeft,
+          children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: List<Widget>.generate(indicatorCount, (i) {
-                return Container(
+              children: List<Widget>.generate(
+                indicatorCount,
+                (i) {
+                  return Container(
                     margin: EdgeInsets.only(
-                        left: i == 0 ? 0 : margin, right: margin),
+                      left: i == 0 ? 0 : margin,
+                      right: margin,
+                    ),
                     child: Container(
-                        width: sizeIndicator,
-                        height: sizeIndicator,
-                        child: inActiveIndicator));
-              }),
+                      width: inactiveIndicatorSize,
+                      height: inactiveIndicatorSize,
+                      child: FittedBox(child: inActiveIndicator),
+                    ),
+                  );
+                },
+              ),
             ),
-            AnimatedBuilder(
-              animation: notifier,
-              builder: (context, anim) {
-                var correctScroll = notifier.value;
-                return Transform.translate(
-                    offset:
-                        Offset((margin * 2 + sizeIndicator) * correctScroll, 0),
+            Transform.translate(
+              offset: Offset(
+                inactiveIndicatorSize / 2 - activeIndicatorSize / 2,
+                0,
+              ),
+              child: AnimatedBuilder(
+                animation: notifier,
+                builder: (context, anim) {
+                  var correctScroll = notifier.value;
+                  return Transform.translate(
+                    offset: Offset(
+                      (margin * 2 + inactiveIndicatorSize) * correctScroll,
+                      0,
+                    ),
                     child: Transform.rotate(
                       angle: 2 * math.pi * correctScroll,
                       child: Container(
-                          width: sizeIndicator,
-                          height: sizeIndicator,
-                          child: activeIndicator),
-                    ));
-              },
+                        width: activeIndicatorSize,
+                        height: activeIndicatorSize,
+                        child: FittedBox(child: activeIndicator),
+                      ),
+                    ),
+                  );
+                },
+              ),
             ),
           ],
         )

@@ -57,14 +57,14 @@ class _ExamplePageState extends State<ExamplePage> {
               notifier: notifier,
               activeIndicator: Icon(
                 Icons.check_circle,
-                size: 10,
                 color: Color(0xFF29B6F6),
               ),
               inActiveIndicator: SvgPicture.asset(
                 "assets/hollow_circle.svg",
               ),
               margin: 8,
-              sizeIndicator: 10,
+              inactiveIndicatorSize: 14,
+              activeIndicatorSize: 14,
             ),
           )
         ],
