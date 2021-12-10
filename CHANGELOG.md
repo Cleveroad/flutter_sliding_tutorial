@@ -1,3 +1,7 @@
+# 1.1.2
+
+- Updated example for web
+
 # 1.1.0+1
 
 - Updated readme

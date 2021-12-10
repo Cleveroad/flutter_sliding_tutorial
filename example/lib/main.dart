@@ -25,6 +25,7 @@ class ExamplePage extends StatefulWidget {
 
 class _ExamplePageState extends State<ExamplePage> {
   final ValueNotifier<double> notifier = ValueNotifier(0);
+  final _pageCtrl = PageController();
   int pageCount = 6;
 
   @override
@@ -35,6 +36,7 @@ class _ExamplePageState extends State<ExamplePage> {
         children: <Widget>[
           /// [StatefulWidget] with [PageView] and [AnimatedBackgroundColor].
           SlidingTutorial(
+            controller: _pageCtrl,
             pageCount: pageCount,
             notifier: notifier,
           ),
@@ -46,6 +48,37 @@ class _ExamplePageState extends State<ExamplePage> {
               width: double.infinity,
               height: 0.5,
               color: Colors.white,
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios_rounded,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                _pageCtrl.previousPage(
+                  duration: Duration(milliseconds: 600),
+                  curve: Curves.linear,
+                );
+              },
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios_rounded,
+                color: Colors.white,
+                textDirection: TextDirection.rtl,
+              ),
+              onPressed: () {
+                _pageCtrl.nextPage(
+                  duration: Duration(milliseconds: 600),
+                  curve: Curves.linear,
+                );
+              },
             ),
           ),
 
