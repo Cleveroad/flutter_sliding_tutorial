@@ -1,28 +1,33 @@
 import 'package:example_flutter_sliding_tutorial/page/e_commerce_page.dart';
 import 'package:example_flutter_sliding_tutorial/page/web_analytics_page.dart';
 import 'package:example_flutter_sliding_tutorial/page/web_developer_page.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
 
 class SlidingTutorial extends StatefulWidget {
-  final ValueNotifier<double> notifier;
-  final int pageCount;
-
   const SlidingTutorial({
+    required this.controller,
     required this.notifier,
     required this.pageCount,
     Key? key,
   }) : super(key: key);
+
+  final ValueNotifier<double> notifier;
+  final int pageCount;
+  final PageController controller;
 
   @override
   State<StatefulWidget> createState() => _SlidingTutorial();
 }
 
 class _SlidingTutorial extends State<SlidingTutorial> {
-  var _pageController = PageController(initialPage: 0);
+  late PageController _pageController;
 
   @override
   void initState() {
+    _pageController = widget.controller;
+
     /// Listen to [PageView] position updates.
     _pageController..addListener(_onScroll);
     super.initState();
@@ -31,13 +36,22 @@ class _SlidingTutorial extends State<SlidingTutorial> {
   @override
   Widget build(BuildContext context) {
     return AnimatedBackgroundColor(
-        pageController: _pageController,
-        pageCount: widget.pageCount,
-        child: Container(
-            child: PageView(
-                controller: _pageController,
-                children: List<Widget>.generate(
-                    widget.pageCount, (index) => _getPageByIndex(index)))));
+      pageController: _pageController,
+      pageCount: widget.pageCount,
+      child: Container(
+        child: Stack(
+          children: [
+            PageView(
+              controller: _pageController,
+              children: List<Widget>.generate(
+                widget.pageCount,
+                (index) => _getPageByIndex(index),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   /// Create different [SlidingPage] for indexes.
