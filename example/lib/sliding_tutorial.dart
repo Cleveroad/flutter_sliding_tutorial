@@ -38,6 +38,13 @@ class _SlidingTutorial extends State<SlidingTutorial> {
     return AnimatedBackgroundColor(
       pageController: _pageController,
       pageCount: widget.pageCount,
+
+      /// You can use your own color list for page background
+      colors: [
+        Colors.red,
+        Colors.yellow,
+        Colors.blueAccent,
+      ],
       child: Container(
         child: Stack(
           children: [
