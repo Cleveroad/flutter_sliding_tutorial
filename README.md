@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  flutter_sliding_tutorial: "^1.1.3"
+  flutter_sliding_tutorial: "^1.1.3+1"
 ```
 
 In your library add the following import:
@@ -75,7 +75,7 @@ If you have any questions regarding the use of this tutorial, please contact us 
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
 
-[changelog history]: /CHANGELOG.md
+[changelog history]: /CHANGELOG.md˜
 
 [Quick Start]: https://github.com/Cleveroad/flutter_sliding_tutorial/wiki/Quick-Start
 
