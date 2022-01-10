@@ -1,3 +1,7 @@
+# 1.1.3
+
+- Fixed Android Embedding
+
 # 1.1.2
 
 - Updated example for web

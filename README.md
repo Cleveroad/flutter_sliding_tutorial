@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ```yaml
 dependencies:
   ...
-  flutter_sliding_tutorial: "^1.1.0+1"
+  flutter_sliding_tutorial: "^1.1.3"
 ```
 
 In your library add the following import:
