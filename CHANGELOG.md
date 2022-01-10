@@ -1,3 +1,7 @@
+# 1.1.3+1
+
+- Added an example of customizing page background colors
+
 # 1.1.3
 
 - Fixed Android Embedding
