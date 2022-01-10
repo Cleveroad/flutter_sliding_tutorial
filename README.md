@@ -4,6 +4,7 @@
 ## Cleveroad introduces Sliding Tutorial Library for Flutter
 
 Hey guys, hope you haven’t started developing a tutorial for your Flutter app yet, as we have already completed a part of your job. Don’t worry, we act from good motives only. Our aim is to help you create a sliding tutorial in a fast and simple manner. So we’ve done some work and voila!. A simple Flutter Sliding Tutorial library is at your service.
+<br>[Open tutorial in the browser](https://flutter-sliding-tutorial.github.io)
 
 ![Demo image](https://github.com/Cleveroad/flutter_sliding_tutorial/raw/master/images/demo.gif)
 ###### Also you can watch the animation of the <strong><a target="_blank" href="https://www.youtube.com/watch?v=lJSGIk4Zh9s&feature=youtu.be">Sliding Tutorial for Android on YouTube</a></strong> in HD quality.
