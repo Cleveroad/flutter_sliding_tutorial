@@ -40,10 +40,13 @@ class _SlidingTutorial extends State<SlidingTutorial> {
       pageCount: widget.pageCount,
 
       /// You can use your own color list for page background
-      colors: [
-        Colors.red,
-        Colors.yellow,
-        Colors.blueAccent,
+      colors: const [
+        Color(0xFFAAAAAA),
+        Color(0xFF669900),
+        Color(0xFFCC0000),
+        Color(0xFF0099CC),
+        Color(0xFFAA66CC),
+        Color(0xFFFF8800),
       ],
       child: Container(
         child: Stack(
