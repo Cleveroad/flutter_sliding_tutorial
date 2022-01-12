@@ -1,3 +1,7 @@
+# 1.1.3+2
+
+- Added web support to example
+
 # 1.1.3+1
 
 - Added an example of customizing page background colors

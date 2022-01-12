@@ -4,3 +4,4 @@ Demonstrates how to use the flutter_sliding_tutorial plugin. [Quick Start] or [E
 
 [Quick Start]: https://github.com/Cleveroad/flutter_sliding_tutorial/wiki/Quick-Start
 [Example]: https://github.com/Cleveroad/flutter_sliding_tutorial/tree/master/example
+[Web application]: https://flutter-sliding-tutorial.github.io
