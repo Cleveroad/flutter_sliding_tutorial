@@ -1,3 +1,7 @@
+# 1.1.3+3
+
+- Fixed <a href = "https://github.com/Cleveroad/flutter_sliding_tutorial/issues/21">#21</a>
+
 # 1.1.3+2
 
 - Added web support to example
