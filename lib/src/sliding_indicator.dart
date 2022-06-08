@@ -54,7 +54,7 @@ class SlidingIndicator extends StatelessWidget {
                   return Container(
                     margin: EdgeInsets.only(
                       left: i == 0 ? 0 : margin,
-                      right: margin,
+                      right: i == indicatorCount - 1 ? 0 : margin,
                     ),
                     child: Container(
                       width: inactiveIndicatorSize,
