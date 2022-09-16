@@ -1,3 +1,8 @@
+# 2.0.0
+
+- Support for Flutter 3.0.0
+- Updated dependencies
+
 # 1.1.3+3
 
 - Fixed <a href = "https://github.com/Cleveroad/flutter_sliding_tutorial/issues/21">#21</a>

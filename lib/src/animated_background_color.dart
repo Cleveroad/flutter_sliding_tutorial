@@ -13,12 +13,7 @@ import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
 ///
 /// [child] widget displayed over [AnimatedBackgroundColor].
 class AnimatedBackgroundColor extends StatelessWidget {
-  final PageController pageController;
-  final int pageCount;
-  final List<Color> colors;
-  final Widget child;
-
-  AnimatedBackgroundColor({
+  const AnimatedBackgroundColor({
     required this.child,
     required this.pageController,
     required this.pageCount,
@@ -30,14 +25,20 @@ class AnimatedBackgroundColor extends StatelessWidget {
       Color(0xFFAA66CC),
       Color(0xFFFF8800),
     ],
-  }) : super();
+    super.key,
+  });
+
+  final PageController pageController;
+  final int pageCount;
+  final List<Color> colors;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
-    var background = TweenSequence<Color?>(
+    final background = TweenSequence<Color?>(
         List<TweenSequenceItem<Color?>>.generate(pageCount, (i) {
       return TweenSequenceItem(
-        weight: 1.0,
+        weight: 1,
         tween: ColorTween(
           begin: colors[i % colors.length],
           end: colors[(i + 1) % colors.length],
@@ -48,7 +49,7 @@ class AnimatedBackgroundColor extends StatelessWidget {
     return AnimatedBuilder(
       animation: pageController,
       builder: (context, child) {
-        var color =
+        final color =
             pageController.hasClients ? pageController.page! / pageCount : .0;
         return DecoratedBox(
           decoration: BoxDecoration(

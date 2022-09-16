@@ -1,0 +1,196 @@
+# Docs: https://dart.dev/guides/language/analysis-options
+# All available rules: https://dart-lang.github.io/linter/lints/
+
+linter:
+  rules:
+    # Const rules.
+    - prefer_const_constructors # If a const constructor is available, it is preferable to use it.
+    - prefer_const_constructors_in_immutables # PREFER declaring const constructors on @immutable classes. If a class is immutable, it is usually a good idea to make its constructor a const constructor.
+    - prefer_const_declarations # Const declarations are more hot-reload friendly and allow to use const constructors if an instantiation references this declaration.
+    - prefer_const_literals_to_create_immutables # PREFER using const for instantiating list, map and set literals used as parameters in immutable class instantiations.
+    - unnecessary_const # AVOID repeating const keyword in a const context.
+
+    # Style rules.
+    - always_declare_return_types # DO declare method return types. When declaring a method or function always specify a return type. Declaring return types for functions helps improve your codebase by allowing the analyzer to more adequately check your code for errors that could occur during runtime.
+    - always_put_control_body_on_new_line # DO separate the control structure expression from its statement.
+    - always_put_required_named_parameters_first # DO specify @required on named parameter before other named parameters.
+    - always_require_non_null_named_parameters # DO specify @required on named parameters without a default value on which an assert(param != null) is done.
+    # - always_specify_types # DO specify type annotations. # Conflicts with omit_local_variable_types, which is more useful.
+    - annotate_overrides # DO annotate overridden methods and fields.
+    - avoid_annotating_with_dynamic # AVOID annotating with dynamic when not required.
+    # - avoid_as # AVOID using as. # Makes some logic constructions too complicated.
+    - avoid_bool_literals_in_conditional_expressions # AVOID bool literals in conditional expressions.
+    # - avoid_catches_without_on_clauses # AVOID catches without on clauses. # Makes errors handling less reliable and more bigger.
+    - avoid_catching_errors # DON'T explicitly catch Error or types that implement it.
+    - avoid_classes_with_only_static_members # AVOID defining a class that contains only static members.
+    - avoid_double_and_int_checks # AVOID to check if type is double or int.
+    - avoid_equals_and_hash_code_on_mutable_classes # AVOID overloading operator == and hashCode on classes not marked @immutable.
+    - avoid_escaping_inner_quotes # Avoid escaping inner quotes by converting surrounding quotes.
+    - avoid_field_initializers_in_const_classes # AVOID field initializers in const classes.
+    # - avoid_function_literals_in_foreach_calls # AVOID using forEach with a function literal.
+    - avoid_implementing_value_types # DON'T implement classes that override ==.
+    - avoid_init_to_null # DON'T explicitly initialize variables to null.
+    - avoid_js_rounded_ints # AVOID integer literals that cannot be represented exactly when compiled to JavaScript.
+    - avoid_null_checks_in_equality_operators # DON'T check for null in custom == operators.
+    - avoid_positional_boolean_parameters # AVOID positional boolean parameters.
+    - avoid_private_typedef_functions # AVOID private typedef functions used only once. Prefer inline function syntax.
+    - avoid_redundant_argument_values # DON'T declare arguments with values that match the defaults for the corresponding parameter.
+    - avoid_renaming_method_parameters # DON'T rename parameters of overridden methods.
+    - avoid_return_types_on_setters # AVOID return types on setters.
+    - avoid_returning_null # AVOID returning null from members whose return type is bool, double, int, or num.
+    - avoid_returning_null_for_void # AVOID returning null for void.
+    - avoid_returning_this # AVOID returning this from methods just to enable a fluent interface.
+    - avoid_setters_without_getters # DON'T define a setter without a corresponding getter.
+    - avoid_shadowing_type_parameters # AVOID shadowing type parameters.
+    - avoid_single_cascade_in_expression_statements # AVOID single cascade in expression statements.
+    #    - avoid_types_on_closure_parameters # AVOID annotating types for function expression parameters.
+    - avoid_unnecessary_containers # Avoid wrapping widgets in unnecessary containers.
+    - avoid_unused_constructor_parameters # AVOID defining unused parameters in constructors. # Gives warning in widget constructor.
+    - avoid_void_async # DO mark async functions to return Future.
+    - await_only_futures # AVOID using await on anything other than a future.
+    - camel_case_extensions # DO name extensions using UpperCamelCase.
+    - camel_case_types # DO name types using UpperCamelCase.
+    - cascade_invocations # DO Use the cascading style when succesively invoking methods on the same reference.
+    - constant_identifier_names # PREFER using lowerCamelCase for constant names.
+    - curly_braces_in_flow_control_structures # DO use curly braces for all flow control structures.
+    - directives_ordering # DO place “dart:” imports before other imports.
+    # - do_not_use_environment # DO NOT use fromEnvironment or hasEnvironment factory constructors. # Doesn't work.
+    - empty_catches # AVOID empty catch blocks.
+    - empty_constructor_bodies # DO use ; instead of {} for empty constructor bodies.
+    # - exhaustive_cases # DO define case clauses for all constants in enum-like classes. # Doesn't work.
+    - file_names # DO name source files using lowercase_with_underscores.
+    - flutter_style_todos # DO Use Flutter TODO format.
+    - implementation_imports # DON'T import implementation files from another package.
+    - join_return_with_assignment # DO join return statement with assignment when possible.
+    - leading_newlines_in_multiline_strings # Multiline strings are easier to read when they start with a newline (a newline starting a multiline string is ignored).
+    - library_names # DO name libraries using lowercase_with_underscores.
+    - library_prefixes # DO use lowercase_with_underscores when specifying a library prefix.
+    # - lines_longer_than_80_chars # AVOID lines longer than 80 characters # Sometimes hard to follow this.
+    # - no_default_cases # DO define default behavior outside switch statements. # Experimental rule.
+    - no_runtimeType_toString # Calling toString on a runtime type is a non-trivial operation that can negatively impact performance. It's better to avoid it.
+    - non_constant_identifier_names # DO name non-constant identifiers using lowerCamelCase.
+    - null_closures # DO NOT pass null as an argument where a closure is expected.
+    - omit_local_variable_types # CONSIDER omitting type annotations for local variables.
+    - one_member_abstracts # AVOID defining a one-member abstract class when a simple function will do.
+    - only_throw_errors # DO throw only instances of classes that extend dart.core.Error or dart.core.Exception.
+    - overridden_fields # DON'T override fields.
+    - package_api_docs # DO provide doc comments for all public APIs.
+    - package_prefixed_library_names # DO prefix library names with the package name and a dot-separated path.
+    - parameter_assignments # DON'T assign new values to parameters of methods or functions.
+    - prefer_adjacent_string_concatenation # DO use adjacent strings to concatenate string literals.
+    - prefer_asserts_in_initializer_lists # DO put asserts in initializer list for constructors with only asserts in their body.
+    - prefer_asserts_with_message # When assertions fail it's not always simple to understand why. Adding a message to the assert helps the developer to understand why the AssertionError occurs.
+    # - prefer_bool_in_asserts # DO use a boolean for assert conditions. # Old rule.
+    - prefer_collection_literals # DO use collection literals when possible.
+    - prefer_conditional_assignment # PREFER using ??= over testing for null.
+    - prefer_constructors_over_static_methods # PREFER defining constructors instead of static methods to create instances.
+    - prefer_contains # DON'T use indexOf to see if a collection contains an element.
+    # - prefer_double_quotes # DO use double quotes where they wouldn't require additional escapes. # Conflicts with better rule prefer_single_quotes.
+    - prefer_equal_for_default_values # DO Use = to separate a named parameter from its default value.
+    # - prefer_expression_function_bodies # CONSIDER using => for short members whose body is a single return statement. # Some functions are not convenient to use with this.
+    - prefer_final_fields # DO prefer declaring private fields as final if they are not reassigned later in the class.
+    - prefer_final_in_for_each # DO prefer declaring for-each loop variables as final if they are not reassigned later in the code.
+    - prefer_final_locals # DO prefer declaring variables as final if they are not reassigned later in the code.
+    - prefer_for_elements_to_map_fromIterable # When building maps from iterables, it is preferable to use for elements.
+    - prefer_foreach # DO use forEach if you are only going to apply a function or a method to all the elements of an iterable.
+    - prefer_function_declarations_over_variables # DO use a function declaration to bind a function to a name.
+    - prefer_generic_function_type_aliases # PREFER generic function type aliases.
+    - prefer_if_elements_to_conditional_expressions # When building collections, it is preferable to use if elements rather than conditionals.
+    - prefer_if_null_operators # Prefer using if null operators instead of null checks in conditional expressions.
+    - prefer_initializing_formals # DO use initializing formals when possible.
+    - prefer_inlined_adds # Declare elements in list literals inline, rather than using add and addAll methods where possible.
+    - prefer_int_literals # DO use int literals rather than the corresponding double literal.
+    - prefer_interpolation_to_compose_strings # PREFER using interpolation to compose strings and values.
+    - prefer_is_empty # DON'T use length to see if a collection is empty.
+    - prefer_is_not_empty # PREFER x.isNotEmpty to !x.isEmpty for Iterable and Map instances.
+    - prefer_is_not_operator # When checking if an object is not of a specified type, it is preferable to use the 'is!' operator.
+    - prefer_iterable_whereType # PREFER iterable.whereType<T>() over iterable.where((e) => e is T).
+    - prefer_mixin # Dart 2.1 introduced a new syntax for mixins that provides a safe way for a mixin to invoke inherited members using super. The new style of mixins should always be used for types that are to be mixed in. As a result, this lint will flag any uses of a class in a with clause.
+    - prefer_null_aware_operators # Prefer using null aware operators instead of null checks in conditional expressions.
+    - prefer_single_quotes # DO use single quotes where they wouldn't require additional escapes.
+    - prefer_spread_collections # Use spread collections when possible.
+    - prefer_typing_uninitialized_variables # PREFER specifying a type annotation for uninitialized variables and fields.
+    - provide_deprecation_message # DO specify a deprecation message (with migration instructions and/or a removal schedule) in the Deprecation constructor.
+    # - public_member_api_docs # DO document all public members. # todo: uncomment later for writing docs
+    - recursive_getters # DON'T create recursive getters.
+    # - sized_box_for_whitespace # Use SizedBox to add whitespace to a layout. A Container is a heavier Widget than a SizedBox, and as bonus, SizedBox has a const constructor. # Doesn't work.
+    - slash_for_doc_comments # PREFER using /// for doc comments. Although Dart supports two syntaxes of doc comments (/// and /**), we prefer using /// for doc comments.
+    - sort_child_properties_last # Sort child properties last in widget instance creations.
+    - sort_constructors_first # DO sort constructor declarations before other members.
+    - sort_unnamed_constructors_first # DO sort unnamed constructor declarations first, before named ones.
+    # - super_goes_last # DO place the super call last in a constructor initialization list. # Old rule.
+    - type_annotate_public_apis # PREFER type annotating public APIs.
+    - type_init_formals # DON'T type annotate initializing formals.
+    - unawaited_futures # DO await functions that return a Future inside of an async function body.
+    - unnecessary_await_in_return # Avoid returning an awaited expression when the expression type is assignable to the function's return type.
+    - unnecessary_brace_in_string_interps # AVOID using braces in interpolation when not needed.
+    # - unnecessary_final # DON'T use final for local variables. # Conflicts with better rule prefer_final_locals.
+    - unnecessary_getters_setters # AVOID wrapping fields in getters and setters just to be "safe".
+    - unnecessary_lambdas # DON'T create a lambda when a tear-off will do.
+    - unnecessary_new # AVOID new keyword to create instances.
+    - unnecessary_null_aware_assignments # AVOID null in null-aware assignment.
+    - unnecessary_null_in_if_null_operators # AVOID using null as an operand in if null operators.
+    - unnecessary_overrides # DON'T override a method to do a super method invocation with same parameters.
+    - unnecessary_parenthesis # AVOID using parenthesis when not needed.
+    - unnecessary_raw_strings # Use raw string only when needed.
+    - unnecessary_string_escapes # Remove unnecessary backslashes in strings.
+    - unnecessary_string_interpolations # Don't use string interpolation if there's only a string expression in it.
+    - unnecessary_this # DON'T use this when not needed to avoid shadowing.
+    - use_full_hex_values_for_flutter_colors # Prefer an 8-digit hexadecimal integer(0xFFFFFFFF) to instantiate Color. Colors have four 8-bit channels, which adds up to 32 bits, so Colors are described using a 32 bit integer.
+    - use_function_type_syntax_for_parameters # Use generic function type syntax for parameters.
+    # - use_is_even_rather_than_modulo # PREFER the use of intValue.isOdd/isEven to check for evenness. # Doesn't work.
+    - use_raw_strings # A raw string can be used to avoid escaping only backslashes and dollars.
+    - use_rethrow_when_possible # DO use rethrow to rethrow a caught exception.
+    - use_setters_to_change_properties # DO use a setter for operations that conceptually change a property.
+    - use_string_buffers # DO use string buffers to compose strings.
+    - use_to_and_as_if_applicable # PREFER naming a method to___() if it copies the object's state to a new object.
+    - void_checks # DO NOT assign to void.
+    - use_super_parameters # Use super-initializer parameters where possible.
+
+    # Error rules.
+    # - always_use_package_imports # DO avoid relative imports for files in lib/. # Doesn't work.
+    - avoid_empty_else # AVOID empty else statements.
+    - avoid_print # DO avoid print calls in production code.
+    - avoid_relative_lib_imports # DO avoid relative imports for files in lib/.
+    - avoid_returning_null_for_future # AVOID returning null for Future.
+    - avoid_slow_async_io # AVOID using the following asynchronous file I/O methods because they are much slower than their synchronous counterparts.
+    - avoid_types_as_parameter_names # AVOID using a parameter name that is the same as an existing type.
+    - avoid_web_libraries_in_flutter # Avoid using web libraries, dart:html, dart:js and dart:js_util in Flutter packages that are not web plugins. These libraries are not supported outside a web context; functionality that depends on them will fail at runtime in Flutter mobile, and their use is generally discouraged in Flutter web.
+    - cancel_subscriptions # DO invoke cancel on instances of dart.async.StreamSubscription.
+    - close_sinks # DO invoke close on instances of dart.core.Sink.
+    # - comment_references # DO reference only in scope identifiers in doc comments.
+    - control_flow_in_finally # AVOID control flow leaving finally blocks.
+    # - diagnostic_describe_all_properties # DO reference all public properties in debug method implementations. # We don't use this
+    - empty_statements # AVOID empty statements.
+    - hash_and_equals # DO override hashCode if overriding == and prefer overriding == if overriding hashCode.
+    - invariant_booleans # DON'T test for conditions that can be inferred at compile time or test the same condition twice.
+    - iterable_contains_unrelated_type # DON'T invoke contains on Iterable with an instance of different type than the parameter type.
+    - list_remove_unrelated_type # DON'T invoke remove on List with an instance of different type than the parameter type.
+    - literal_only_boolean_expressions # DON'T test for conditions composed only by literals, since the value can be inferred at compile time.
+    - no_adjacent_strings_in_list # DON'T use adjacent strings in list.
+    - no_duplicate_case_values # DON'T use more than one case with same value.
+    - no_logic_in_create_state # DON'T put any logic in createState().
+    # - prefer_relative_imports # Prefer relative imports for files in lib/. # Bad rule
+    - prefer_void_to_null # DO NOT use the type Null where void would work.
+    - test_types_in_equals # DO test type arguments in operator ==(Object other).
+    - throw_in_finally # AVOID throwing exceptions in finally blocks.
+    - unnecessary_statements # AVOID using unnecessary statements.
+    - unrelated_type_equality_checks # DON'T Compare references of unrelated types for equality.
+    - unsafe_html # https://dart-lang.github.io/linter/lints/unsafe_html.html
+    - use_key_in_widget_constructors # DO use key in widget constructors.
+    - valid_regexps # DO use valid regular expression syntax when creating regular expression instances.
+
+    # Pub rules.
+    - package_names # DO use lowercase_with_underscores for package names.
+
+analyzer:
+  # TODO(implement) later
+  #  strong-mode:
+  #     Stricter type checks.
+  #    implicit-casts: false
+  #    implicit-dynamic: false
+  errors:
+    missing_required_param: error
+  exclude:
+    # Build
+    - 'build/**'
