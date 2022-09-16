@@ -9,14 +9,14 @@ import 'package:flutter_sliding_tutorial/src/sliding_page.dart';
 /// [offset] value for tweaking parallax movement of [child].
 /// Different values can be used to find best solution.
 class SlidingContainer extends StatefulWidget {
-  final Widget child;
-  final double offset;
-
-  SlidingContainer({
+  const SlidingContainer({
     required this.child,
     this.offset = 100,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
+
+  final Widget child;
+  final double offset;
 
   @override
   State<StatefulWidget> createState() => _SlidingContainer();
@@ -41,7 +41,7 @@ class _SlidingContainer extends State<SlidingContainer> {
         var offsetX =
             (_notifier.value - _notifier.value.toInt()) * widget.offset;
         offsetX *= -1;
-        var isCurrentPage = _notifier.value.toInt() == _page;
+        final isCurrentPage = _notifier.value.toInt() == _page;
         return Transform.translate(
             offset: Offset(
                 (_page == 0)

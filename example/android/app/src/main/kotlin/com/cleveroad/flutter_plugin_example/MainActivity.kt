@@ -1,4 +1,4 @@
-package com.cleveroad.flutter_plugin_example
+package com.cleveroad.flutter_sliding_tutorial_example
 
 import io.flutter.embedding.android.FlutterActivity;
 

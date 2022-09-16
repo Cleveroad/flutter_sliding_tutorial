@@ -19,14 +19,6 @@ import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
 ///
 /// [margin] space between [inActiveIndicator] widgets.
 class SlidingIndicator extends StatelessWidget {
-  final ValueNotifier<double> notifier;
-  final Widget activeIndicator;
-  final Widget inActiveIndicator;
-  final double activeIndicatorSize;
-  final double inactiveIndicatorSize;
-  final int indicatorCount;
-  final double margin;
-
   const SlidingIndicator({
     required this.notifier,
     required this.activeIndicator,
@@ -35,8 +27,16 @@ class SlidingIndicator extends StatelessWidget {
     this.activeIndicatorSize = 10,
     this.inactiveIndicatorSize = 10,
     this.margin = 8,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
+
+  final ValueNotifier<double> notifier;
+  final Widget activeIndicator;
+  final Widget inActiveIndicator;
+  final double activeIndicatorSize;
+  final double inactiveIndicatorSize;
+  final int indicatorCount;
+  final double margin;
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ class SlidingIndicator extends StatelessWidget {
               child: AnimatedBuilder(
                 animation: notifier,
                 builder: (context, anim) {
-                  var correctScroll = notifier.value;
+                  final correctScroll = notifier.value;
                   return Transform.translate(
                     offset: Offset(
                       (margin * 2 + inactiveIndicatorSize) * correctScroll,
