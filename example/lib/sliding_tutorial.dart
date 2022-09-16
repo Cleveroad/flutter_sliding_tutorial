@@ -10,8 +10,8 @@ class SlidingTutorial extends StatefulWidget {
     required this.controller,
     required this.notifier,
     required this.pageCount,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final ValueNotifier<double> notifier;
   final int pageCount;
@@ -29,7 +29,7 @@ class _SlidingTutorial extends State<SlidingTutorial> {
     _pageController = widget.controller;
 
     /// Listen to [PageView] position updates.
-    _pageController..addListener(_onScroll);
+    _pageController.addListener(_onScroll);
     super.initState();
   }
 
@@ -40,6 +40,7 @@ class _SlidingTutorial extends State<SlidingTutorial> {
       pageCount: widget.pageCount,
 
       /// You can use your own color list for page background
+      //ignore: avoid_redundant_argument_values
       colors: const [
         Color(0xFFAAAAAA),
         Color(0xFF669900),
@@ -48,18 +49,16 @@ class _SlidingTutorial extends State<SlidingTutorial> {
         Color(0xFFAA66CC),
         Color(0xFFFF8800),
       ],
-      child: Container(
-        child: Stack(
-          children: [
-            PageView(
-              controller: _pageController,
-              children: List<Widget>.generate(
-                widget.pageCount,
-                (index) => _getPageByIndex(index),
-              ),
+      child: Stack(
+        children: [
+          PageView(
+            controller: _pageController,
+            children: List<Widget>.generate(
+              widget.pageCount,
+              _getPageByIndex,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -74,12 +73,12 @@ class _SlidingTutorial extends State<SlidingTutorial> {
       case 2:
         return ECommercePage(index, widget.notifier);
       default:
-        throw ArgumentError("Unknown position: $index");
+        throw ArgumentError('Unknown position: $index');
     }
   }
 
   /// Notify [SlidingPage] about current page changes.
-  _onScroll() {
+  void _onScroll() {
     widget.notifier.value = _pageController.page ?? 0;
   }
 }
