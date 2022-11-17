@@ -1,3 +1,7 @@
+# 2.0.0+1
+
+- Removed margin from the last indicator
+
 # 2.0.0
 
 - Support for Flutter 3.0.0
