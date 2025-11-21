@@ -1,6 +1,9 @@
-# 2.0.0+1
+# 2.1.0
 
-- Removed margin from the last indicator
+- Upgraded Flutter SDK from 3.10.2 to 3.35.6
+- Updated dependencies
+- Updated platform dependencies in the example project
+- Fixed minor compatibility issue after the upgrade
 
 # 2.0.0
 

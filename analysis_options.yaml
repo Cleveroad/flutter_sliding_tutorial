@@ -14,7 +14,6 @@ linter:
     - always_declare_return_types # DO declare method return types. When declaring a method or function always specify a return type. Declaring return types for functions helps improve your codebase by allowing the analyzer to more adequately check your code for errors that could occur during runtime.
     - always_put_control_body_on_new_line # DO separate the control structure expression from its statement.
     - always_put_required_named_parameters_first # DO specify @required on named parameter before other named parameters.
-    - always_require_non_null_named_parameters # DO specify @required on named parameters without a default value on which an assert(param != null) is done.
     # - always_specify_types # DO specify type annotations. # Conflicts with omit_local_variable_types, which is more useful.
     - annotate_overrides # DO annotate overridden methods and fields.
     - avoid_annotating_with_dynamic # AVOID annotating with dynamic when not required.
@@ -37,7 +36,6 @@ linter:
     - avoid_redundant_argument_values # DON'T declare arguments with values that match the defaults for the corresponding parameter.
     - avoid_renaming_method_parameters # DON'T rename parameters of overridden methods.
     - avoid_return_types_on_setters # AVOID return types on setters.
-    - avoid_returning_null # AVOID returning null from members whose return type is bool, double, int, or num.
     - avoid_returning_null_for_void # AVOID returning null for void.
     - avoid_returning_this # AVOID returning this from methods just to enable a fluent interface.
     - avoid_setters_without_getters # DON'T define a setter without a corresponding getter.
@@ -74,7 +72,6 @@ linter:
     - one_member_abstracts # AVOID defining a one-member abstract class when a simple function will do.
     - only_throw_errors # DO throw only instances of classes that extend dart.core.Error or dart.core.Exception.
     - overridden_fields # DON'T override fields.
-    - package_api_docs # DO provide doc comments for all public APIs.
     - package_prefixed_library_names # DO prefix library names with the package name and a dot-separated path.
     - parameter_assignments # DON'T assign new values to parameters of methods or functions.
     - prefer_adjacent_string_concatenation # DO use adjacent strings to concatenate string literals.
@@ -86,7 +83,6 @@ linter:
     - prefer_constructors_over_static_methods # PREFER defining constructors instead of static methods to create instances.
     - prefer_contains # DON'T use indexOf to see if a collection contains an element.
     # - prefer_double_quotes # DO use double quotes where they wouldn't require additional escapes. # Conflicts with better rule prefer_single_quotes.
-    - prefer_equal_for_default_values # DO Use = to separate a named parameter from its default value.
     # - prefer_expression_function_bodies # CONSIDER using => for short members whose body is a single return statement. # Some functions are not convenient to use with this.
     - prefer_final_fields # DO prefer declaring private fields as final if they are not reassigned later in the class.
     - prefer_final_in_for_each # DO prefer declaring for-each loop variables as final if they are not reassigned later in the code.
@@ -152,7 +148,6 @@ linter:
     - avoid_empty_else # AVOID empty else statements.
     - avoid_print # DO avoid print calls in production code.
     - avoid_relative_lib_imports # DO avoid relative imports for files in lib/.
-    - avoid_returning_null_for_future # AVOID returning null for Future.
     - avoid_slow_async_io # AVOID using the following asynchronous file I/O methods because they are much slower than their synchronous counterparts.
     - avoid_types_as_parameter_names # AVOID using a parameter name that is the same as an existing type.
     - avoid_web_libraries_in_flutter # Avoid using web libraries, dart:html, dart:js and dart:js_util in Flutter packages that are not web plugins. These libraries are not supported outside a web context; functionality that depends on them will fail at runtime in Flutter mobile, and their use is generally discouraged in Flutter web.
@@ -163,9 +158,6 @@ linter:
     # - diagnostic_describe_all_properties # DO reference all public properties in debug method implementations. # We don't use this
     - empty_statements # AVOID empty statements.
     - hash_and_equals # DO override hashCode if overriding == and prefer overriding == if overriding hashCode.
-    - invariant_booleans # DON'T test for conditions that can be inferred at compile time or test the same condition twice.
-    - iterable_contains_unrelated_type # DON'T invoke contains on Iterable with an instance of different type than the parameter type.
-    - list_remove_unrelated_type # DON'T invoke remove on List with an instance of different type than the parameter type.
     - literal_only_boolean_expressions # DON'T test for conditions composed only by literals, since the value can be inferred at compile time.
     - no_adjacent_strings_in_list # DON'T use adjacent strings in list.
     - no_duplicate_case_values # DON'T use more than one case with same value.
@@ -176,7 +168,6 @@ linter:
     - throw_in_finally # AVOID throwing exceptions in finally blocks.
     - unnecessary_statements # AVOID using unnecessary statements.
     - unrelated_type_equality_checks # DON'T Compare references of unrelated types for equality.
-    - unsafe_html # https://dart-lang.github.io/linter/lints/unsafe_html.html
     - use_key_in_widget_constructors # DO use key in widget constructors.
     - valid_regexps # DO use valid regular expression syntax when creating regular expression instances.
 
